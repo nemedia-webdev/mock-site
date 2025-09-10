@@ -90,7 +90,7 @@
         </div>
         <div class="masthead__right">
           <div class="auth-actions">
-            <a class="btn ghost" href="#">Sign in</a>
+            <a class="btn ghost" href="#" data-signin-open>Sign in</a>
             <a class="btn primary" href="#">Subscribe</a>
           </div>
         </div>
@@ -575,6 +575,45 @@
 
   </div>
 </footer>
+
+<!-- Sign-in Modal -->
+<div class="modal-backdrop" data-modal-overlay hidden></div>
+
+<div class="modal" id="signinModal" aria-hidden="true" role="dialog" aria-labelledby="signinTitle" aria-modal="true">
+  <div class="modal__card">
+    <button class="icon-btn modal__close" type="button" data-signin-close aria-label="Close sign in">✕</button>
+
+    <h2 id="signinTitle" class="modal__title">Sign in</h2>
+
+    <button type="button" class="btn btn-google" aria-label="Sign in with Google">
+      <!-- Simple G icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+        <path fill="#EA4335" d="M12 10.2v3.9h5.5A5 5 0 1 1 12 7a4.9 4.9 0 0 1 3.5 1.4l2.5-2.5A8 8 0 1 0 20 12a8.5 8.5 0 0 0-.1-1.3H12z"/>
+        <path fill="#34A853" d="M3.5 14.7A8 8 0 0 0 12 20a7.8 7.8 0 0 0 5.4-2.1l-2.6-2A5 5 0 0 1 7 13H3.5z"/>
+        <path fill="#4A90E2" d="M17.4 17.9A8 8 0 0 0 20 12c0-.4 0-.9-.1-1.3H12v3.9h5.5c-.3 1.4-1.2 2.5-2.1 3.3z"/>
+        <path fill="#FBBC05" d="M7 13a4.9 4.9 0 0 1 0-2h-3.5a8 8 0 0 0 0 4H7z"/>
+      </svg>
+      <span>Sign in with Google</span>
+    </button>
+
+    <div class="modal__divider"><span>or</span></div>
+
+    <form class="modal__form" action="#" method="post" novalidate>
+      <label class="sr-only" for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="Email" required>
+
+      <label class="sr-only" for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="Password" required>
+
+      <button type="submit" class="btn primary modal__submit">Sign in</button>
+    </form>
+
+    <div class="modal__links">
+      <a href="#">Forgot password?</a>
+      <a href="#">Create an account</a>
+    </div>
+  </div>
+</div>
 
   <script src="app.js" defer></script>
 </body>
