@@ -49,3 +49,41 @@ document.querySelectorAll('.nav-accordion').forEach(btn => {
     }
   });
 });
+
+// Sign-in modal
+const signinModal   = document.getElementById('signinModal');
+const signinOpeners = document.querySelectorAll('[data-signin-open]');
+const signinClose   = document.querySelector('[data-signin-close]');
+const modalOverlay  = document.querySelector('[data-modal-overlay]');
+
+function openSignin() {
+  if (!signinModal) return;
+  signinModal.setAttribute('aria-hidden', 'false');
+  if (modalOverlay) modalOverlay.hidden = false;
+  document.body.style.overflow = 'hidden';
+  // focus first field
+  const first = signinModal.querySelector('input, button');
+  first && first.focus();
+}
+
+function closeSignin() {
+  if (!signinModal) return;
+  signinModal.setAttribute('aria-hidden', 'true');
+  if (modalOverlay) modalOverlay.hidden = true;
+  document.body.style.overflow = '';
+}
+
+signinOpeners.forEach(el => el.addEventListener('click', (e) => {
+  e.preventDefault();
+  openSignin();
+}));
+
+signinClose?.addEventListener('click', closeSignin);
+modalOverlay?.addEventListener('click', closeSignin);
+
+// ESC to close
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && signinModal?.getAttribute('aria-hidden') === 'false') {
+    closeSignin();
+  }
+});
