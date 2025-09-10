@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Section | NE Media</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Masthead -->
+    <header class="masthead" role="banner">
+      <div class="container grid masthead__row">
+        <div class="masthead__left">
+          <button class="btn ghost icon-btn" id="openMenu" aria-controls="offcanvas" aria-expanded="false">
+            ☰ All Sections
+          </button>
+        </div>
+        <div class="masthead__center logo" aria-label="Site">
+                    <a href="index.html" class="logo" aria-label="NE Media Home">
+            <img src="Wangaratta Chronicle - CMYK Blue.png" alt="NE Media" />
+          </a>
+        </div>
+        <div class="masthead__right auth-actions">
+          <a class="btn ghost" href="#">Sign in</a>
+          <a class="btn primary" href="#">Subscribe</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Primary nav bar -->
+    <nav class="primary-bar" aria-label="Primary">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">News</a></li>
+          <li><a href="section.html" aria-current="page">Sport</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Rural</a></li>
+          <li><a href="#">Digital Editions</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Leaderboard -->
+    <div class="leaderboard">
+      <div class="container">
+        <div class="ad ad--leaderboard">Leaderboard Ad 970×90</div>
+      </div>
+    </div>
+
+    <main id="main" class="container grid">
+      <!-- Section heading -->
+      <section class="section-block" aria-labelledby="section-h">
+        <div class="section-block__head">
+          <h2 id="section-h">Sport — All stories</h2>
+          <a class="see-all" href="#">RSS</a>
+        </div>
+      </section>
+
+      <!-- Top area: 2 features + Top stories rail -->
+      <section class="top-news" aria-labelledby="top-h">
+        <h2 id="top-h" class="sr-only">Top stories</h2>
+
+        <div class="top-news__grid">
+          <!-- Left: two feature cards (reuse home styles) -->
+          <div class="top-news__left">
+            <article class="feature-card">
+              <a class="feature-card__media" href="article.html">
+                <img src="https://picsum.photos/1200/800?random=201" alt="Primary feature image" />
+              </a>
+              <div class="feature-card__overlay">
+                <span class="kicker">News</span>
+                <h3 class="feature-card__title">
+                  Primary headline overlays the image – clean, readable
+                </h3>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <a class="feature-card__media" href="article.html">
+                <img src="https://picsum.photos/1200/800?random=202" alt="Second feature image" />
+              </a>
+              <div class="feature-card__overlay">
+                <span class="kicker">Sport</span>
+                <h3 class="feature-card__title">
+                  Second lead story sits alongside the first for balanced prominence
+                </h3>
+              </div>
+            </article>
+
+            <!-- (Optional) mini rail under features, remove if not needed
+            <div class="mini-grid">
+              ...mini cards...
+            </div>
+            -->
+          </div>
+
+          <!-- Right: Top stories list -->
+          <aside class="rail-ad" aria-label="Top stories">
+  <div class="top-stories">
+    <h2>Top stories</h2>
+    <ul>
+      <li><a href="article.html">Coach outlines finals blueprint</a></li>
+      <li><a href="article.html">Local derby ends in dramatic draw</a></li>
+      <li><a href="article.html">Rising star wins state title</a></li>
+      <li><a href="article.html">Club launches women’s program</a></li>
+      <li><a href="article.html">Veteran returns from injury layoff</a></li>
+    </ul>
+  </div>
+</aside>
+
+        </div>
+      </section>
+
+      <!-- Stream: rows of 3 with sticky half-page ad on the right -->
+      <section aria-labelledby="all-h" class="section-block section-block--stream" style="margin-top: 6px;">
+        <h2 id="all-h" class="sr-only">All stories</h2>
+
+        <div class="section-block__inner" style="display:grid; gap:var(--gutter); grid-template-columns:1fr;">
+          <!-- Cards grid -->
+          <div class="cards cards--triple">
+            <!-- Row 1 -->
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=211" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Local derby ends in dramatic draw</a></h3>
+                <p class="card__summary">Both teams traded late goals to share the points in front of a packed crowd.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=212" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Rising star wins state title</a></h3>
+                <p class="card__summary">The 17-year-old’s breakthrough performance has pundits tipping a big future.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=213" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Club launches women’s program</a></h3>
+                <p class="card__summary">New initiative aims to boost participation and pathways across the region.</p>
+              </div>
+            </article>
+
+            <!-- Row 2 -->
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=214" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Veteran returns from injury layoff</a></h3>
+                <p class="card__summary">A steady performance on return sets up a strong back half of the year.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=215" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Coach outlines finals blueprint</a></h3>
+                <p class="card__summary">Focus shifts to discipline and defence as the run-in to September begins.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=216" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Local club celebrates 50 years</a></h3>
+                <p class="card__summary">Life members gathered for a night of stories, awards and nostalgia.</p>
+              </div>
+            </article>
+
+            <!-- Row 3 (sample; duplicate/remove as needed) -->
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=217" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Academy prospects push for senior call-ups</a></h3>
+                <p class="card__summary">A strong mid-season run has selectors taking notice of the club’s youth.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=218" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Training base upgrade approved</a></h3>
+                <p class="card__summary">New gym and rehab facilities will expand capacity for pre-season programs.</p>
+              </div>
+            </article>
+
+            <article class="card">
+              <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=219" alt="Story image" /></a>
+              <div class="card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="card__title"><a href="article.html">Community day returns to home ground</a></h3>
+                <p class="card__summary">Fans will have a chance to meet players and tour the rooms this weekend.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Right rail: sticky half page ad (will sit under Top stories on desktop) -->
+          <aside class="rail-ad" role="complementary" aria-label="Advertisement">
+            <div class="ad ad--halfpage">Half Page Ad 300×600</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same as home) -->
+    <footer class="site-footer site-footer--dark" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <section class="footer-brand">
+            <h3 class="footer-logo">NewsToday</h3>
+            <p class="footer-blurb">Your trusted source for breaking news, in-depth analysis, and comprehensive coverage of global events.</p>
+            <nav class="footer-socials" aria-label="Social media">
+              <a href="#" aria-label="Facebook" class="social">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.01 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.86h2.78l-.44 2.9h-2.34V22c4.78-.78 8.44-4.93 8.44-9.94Z"/></svg>
+              </a>
+              <a href="#" aria-label="Twitter / X" class="social">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h4.7l4.24 6.02L16.7 3H21l-7.9 9.27L21 21h-4.7l-4.6-6.53L7.3 21H3l8.1-8.73L3 3Z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="social">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube" class="social">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.6-.46-5.3a3.06 3.06 0 0 0-2.15-2.15C18.7 4.1 12 4.1 12 4.1s-6.7 0-8.39.45A3.06 3.06 0 0 0 1.46 6.7C1 8.4 1 12 1 12s0 3.6.46 5.3a3.06 3.06 0 0 0 2.15 2.15c1.69.45 8.39.45 8.39.45s6.7 0 8.39-.45a3.06 3.06 0 0 0 2.15-2.15C23 15.6 23 12 23 12ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
+              </a>
+            </nav>
+          </section>
+
+          <section class="footer-col">
+            <h4>News Categories</h4>
+            <ul>
+              <li><a href="#">Breaking News</a></li>
+              <li><a href="#">Politics</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">World</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Science</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Press Releases</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">RSS Feeds</a></li>
+              <li><a href="#">Archives</a></li>
+              <li><a href="#">Weather</a></li>
+              <li><a href="#">Obituaries</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <hr class="footer-rule" />
+
+        <section class="footer-newsletter" aria-label="Newsletter signup">
+          <div class="footer-newsletter__copy">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to our newsletter for the latest headlines and exclusive content.</p>
+          </div>
+          <form class="footer-form" action="#" method="post" aria-label="Subscribe form">
+            <label class="sr-only" for="newsletter-email">Your email address</label>
+            <input id="newsletter-email" type="email" placeholder="Your email address" required />
+            <button type="submit" class="btn primary">Subscribe</button>
+          </form>
+        </section>
+
+        <div class="footer-bottom">
+          <p>© 2025 NewsToday. All rights reserved.</p>
+          <nav aria-label="Legal">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Settings</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Offcanvas (reuse) -->
+    <div id="offcanvas" class="offcanvas" aria-hidden="true">
+      <div class="offcanvas__header">
+        <strong>All Sections</strong>
+        <button class="icon-btn" id="closeMenu" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="offcanvas__nav" aria-label="Site">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="section.html" aria-current="page">Sport</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Rural</a></li>
+          <li><a href="#">Digital Editions</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

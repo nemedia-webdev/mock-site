@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NE Media — Home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <!-- Offcanvas overlay -->
+<div class="overlay" data-overlay hidden></div>
+
+<!-- Offcanvas -->
+<div id="offcanvas" class="offcanvas" aria-hidden="true">
+  <div class="offcanvas__header">
+    <strong>All Sections</strong>
+    <button
+      class="icon-btn"
+      id="closeMenu"
+      type="button"
+      data-offcanvas-close
+      aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="offcanvas__nav" aria-label="Site">
+    <ul class="offcanvas-list">
+
+      <!-- Collapsible: News -->
+      <li class="has-sub">
+        <button
+          class="nav-accordion"
+          type="button"
+          aria-expanded="false"
+          aria-controls="news-sub">
+          News
+        </button>
+        <ul id="news-sub" class="submenu" hidden>
+          <li><a href="#">Breaking</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Local Government</a></li>
+          <li><a href="#">Police &amp; Courts</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
+      </li>
+
+      <!-- Collapsible: Sport -->
+      <li class="has-sub">
+        <button
+          class="nav-accordion"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sport-sub">
+          Sport
+        </button>
+        <ul id="sport-sub" class="submenu" hidden>
+          <li><a href="#">AFL</a></li>
+          <li><a href="#">Soccer</a></li>
+          <li><a href="#">Cricket</a></li>
+          <li><a href="#">Netball</a></li>
+          <li><a href="#">Bowls</a></li>
+        </ul>
+      </li>
+
+      <!-- Regular (non-collapsible) items -->
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Rural</a></li>
+      <li><a href="#">Opinion</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">What’s On</a></li>
+      <li><a href="#">Obituaries</a></li>
+      <li><a href="#">Classifieds</a></li>
+      <li><a href="#">Digital Editions</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+  <header class="masthead" role="banner">
+    <div class="container grid">
+      <div class="masthead__row">
+        <div class="masthead__left">
+          <button class="btn ghost" data-offcanvas-open aria-haspopup="dialog" aria-controls="offcanvas">☰ All Sections</button>
+        </div>
+        <div class="masthead__center">
+          <a href="index.html" class="logo" aria-label="NE Media Home">
+            <img src="Wangaratta Chronicle - CMYK Blue.png" alt="NE Media" />
+          </a>
+        </div>
+        <div class="masthead__right">
+          <div class="auth-actions">
+            <a class="btn ghost" href="#">Sign in</a>
+            <a class="btn primary" href="#">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Primary nav bar (moved under masthead) -->
+  <nav class="primary-bar" aria-label="Primary">
+    <div class="container">
+      <ul>
+        <li><a href="section.html">News</a></li>
+        <li><a href="section.html">Sport</a></li>
+        <li><a href="section.html">Community</a></li>
+        <li><a href="section.html">Rural</a></li>
+        <li><a href="section.html">Digital Editions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Leaderboard Ad -->
+  <div class="leaderboard">
+    <div class="container">
+      <div class="ad ad--leaderboard" aria-label="advertisement" role="complementary">Leaderboard Ad 970×90</div>
+    </div>
+  </div>
+
+  <main class="container grid" id="main">
+    <!-- Top News + Half Page Ad -->
+    <section class="top-news" aria-labelledby="top-news-h">
+      <h2 id="top-news-h" class="sr-only">Top News</h2>
+      <div class="top-news__grid">
+        <div class="top-news__left">
+          <!-- Two feature stories side-by-side -->
+          <article class="feature-card">
+            <a class="feature-card__media" href="article.html">
+              <img src="https://picsum.photos/1200/700?random=201" alt="Top story 1" />
+              <div class="feature-card__overlay">
+                <span class="kicker">News</span>
+                <h3 class="feature-card__title">Primary headline overlays the image - clean, readable</h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="feature-card">
+            <a class="feature-card__media" href="article.html">
+              <img src="https://picsum.photos/1200/700?random=202" alt="Top story 2" />
+              <div class="feature-card__overlay">
+                <span class="kicker">Sport</span>
+                <h3 class="feature-card__title">Second lead story sits alongside the first for balanced prominence</h3>
+              </div>
+            </a>
+          </article>
+
+          <!-- Four smaller cards underneath (single row) -->
+          <div class="mini-grid">
+            <article class="mini-card">
+              <a class="mini-card__media" href="article.html"><img src="https://picsum.photos/600/400?random=211" alt="Story" /></a>
+              <div class="mini-card__body">
+                <a class="section-tag" href="#">Sport</a>
+                <h3 class="mini-card__title"><a href="article.html">Local derby ends in dramatic draw</a></h3>
+                <p class="mini-card__summary">Both teams traded late goals to share the points in front of a packed crowd.</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <a class="mini-card__media" href="article.html"><img src="https://picsum.photos/600/400?random=212" alt="Story" /></a>
+              <div class="mini-card__body">
+                <a class="section-tag" href="#">Community</a>
+                <h3 class="mini-card__title"><a href="article.html">Volunteers restore historic hall</a></h3>
+                <p class="mini-card__summary">Months of careful work culminate in a re‑opening celebration this weekend.</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <a class="mini-card__media" href="article.html"><img src="https://picsum.photos/600/400?random=213" alt="Story" /></a>
+              <div class="mini-card__body">
+                <a class="section-tag" href="#">Rural</a>
+                <h3 class="mini-card__title"><a href="article.html">Harvest outlook improves after rain</a></h3>
+                <p class="mini-card__summary">Growers report strong early signs across several key crops.</p>
+              </div>
+            </article>
+            <article class="mini-card">
+              <a class="mini-card__media" href="article.html"><img src="https://picsum.photos/600/400?random=214" alt="Story" /></a>
+              <div class="mini-card__body">
+                <a class="section-tag" href="#">News</a>
+                <h3 class="mini-card__title"><a href="article.html">Regional rail upgrades set to begin next month</a></h3>
+                <p class="mini-card__summary">Commuters can expect improved frequency and accessibility as projects roll out.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+<aside class="ad ad--halfpage" aria-label="advertisement" role="complementary">
+  <img src="Apliances ONLINE_Digital Mock Up Ad_300x600px_RGB.png" alt="Advertisement" />
+</aside>
+      </div>
+    </section>
+
+    <!-- Section: Latest -->
+<section class="section-block" aria-labelledby="latest-h">
+  <div class="section-block__head">
+    <h2 id="latest-h">Latest</h2>
+    <a class="see-all" href="#">See all</a>
+  </div>
+
+  <div class="cards">
+    <!-- Card 1 -->
+    <article class="card">
+      <a class="card__media" href="article.html">
+        <img src="https://picsum.photos/600/400?random=2" alt="Story image" />
+      </a>
+      <div class="card__body">
+        <a class="section-tag" href="#">News</a>
+        <h3 class="card__title"><a href="article.html">Council approves new town plan after lengthy debate</a></h3>
+        <p class="card__summary">The updated plan focuses on green spaces, pedestrian access, and heritage preservation across the CBD.</p>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card">
+      <a class="card__media" href="article.html">
+        <img src="https://picsum.photos/600/400?random=3" alt="Story image" />
+      </a>
+      <div class="card__body">
+        <a class="section-tag" href="#">News</a>
+        <h3 class="card__title"><a href="article.html">Regional rail upgrades set to begin next month</a></h3>
+        <p class="card__summary">Commuters can expect improved frequency and accessibility as projects roll out in stages.</p>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <a class="card__media" href="article.html">
+        <img src="https://picsum.photos/600/400?random=4" alt="Story image" />
+      </a>
+      <div class="card__body">
+        <a class="section-tag" href="#">News</a>
+        <h3 class="card__title"><a href="article.html">Local festival returns with record number of stalls</a></h3>
+        <p class="card__summary">Organisers say the response has exceeded expectations with new food and music acts.</p>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card">
+      <a class="card__media" href="article.html">
+        <img src="https://picsum.photos/600/400?random=5" alt="Story image" />
+      </a>
+      <div class="card__body">
+        <a class="section-tag" href="#">News</a>
+        <h3 class="card__title"><a href="article.html">Fire crews contain grassfire on town outskirts</a></h3>
+        <p class="card__summary">Residents praised emergency services for their rapid response and clear communication.</p>
+      </div>
+    </article>
+
+<!-- Card 5 -->
+<article class="card">
+  <a class="card__media" href="article.html">
+    <img src="https://picsum.photos/600/400?random=25" alt="Story image" />
+  </a>
+  <div class="card__body">
+    <a class="section-tag" href="#">News</a>
+    <h3 class="card__title"><a href="article.html">The quick brown fox jumped over the log</a></h3>
+    <p class="card__summary">Residents praised emergency services for their rapid response and clear communication.</p>
+  </div>
+</article>
+
+<!-- Card 6 -->
+<article class="card">
+  <a class="card__media" href="article.html">
+    <img src="https://picsum.photos/600/400?random=26" alt="Story image" />
+  </a>
+  <div class="card__body">
+    <a class="section-tag" href="#">Community</a>
+    <h3 class="card__title"><a href="article.html">Volunteers rally to support annual fundraiser</a></h3>
+    <p class="card__summary">Local groups join forces to raise money for improvements to town facilities.</p>
+  </div>
+</article>
+
+<!-- Card 7 -->
+<article class="card">
+  <a class="card__media" href="article.html">
+    <img src="https://picsum.photos/600/400?random=27" alt="Story image" />
+  </a>
+  <div class="card__body">
+    <a class="section-tag" href="#">Sport</a>
+    <h3 class="card__title"><a href="article.html">Junior team celebrates championship win</a></h3>
+    <p class="card__summary">A season of hard work pays off as the under-15 squad secures a surprise victory.</p>
+  </div>
+</article>
+
+<!-- Card 8 -->
+<article class="card">
+  <a class="card__media" href="article.html">
+    <img src="https://picsum.photos/600/400?random=28" alt="Story image" />
+  </a>
+  <div class="card__body">
+    <a class="section-tag" href="#">Rural</a>
+    <h3 class="card__title"><a href="article.html">Farmers optimistic about early harvest yields</a></h3>
+    <p class="card__summary">Good rainfall and mild conditions have created a positive outlook across the district.</p>
+  </div>
+</article>
+
+
+  </div>
+</section>
+
+    <!-- Section: Sport with right rail half-page ad -->
+<section class="section-block section-block--halfpage" aria-labelledby="sport-h">
+  <div class="section-block__head">
+    <h2 id="sport-h">Sport</h2>
+    <a class="see-all" href="#">See all</a>
+  </div>
+
+  <div class="section-block__inner">
+    <!-- Left: cards (2 rows × 3 = 6 cards) -->
+    <div class="cards cards--triple">
+      <!-- Card 1 -->
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=61" alt="Sport image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Sport</a>
+          <h3 class="card__title"><a href="article.html">Local derby ends in dramatic draw</a></h3>
+          <p class="card__summary">Both teams traded late goals to share the points in front of a packed crowd.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=62" alt="Sport image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Sport</a>
+          <h3 class="card__title"><a href="article.html">Rising star wins state title</a></h3>
+          <p class="card__summary">The 17-year-old’s breakthrough performance has pundits tipping a big future.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=63" alt="Sport image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Sport</a>
+          <h3 class="card__title"><a href="article.html">Club launches women’s program</a></h3>
+          <p class="card__summary">New initiative aims to boost participation and pathways across the region.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=64" alt="Sport image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Sport</a>
+          <h3 class="card__title"><a href="article.html">Veteran returns from injury layoff</a></h3>
+          <p class="card__summary">A steady performance on debut sets up a strong back half of the season.</p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=65" alt="Sport image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Sport</a>
+          <h3 class="card__title"><a href="article.html">Coach outlines finals blueprint</a></h3>
+          <p class="card__summary">Focus shifts to discipline and defence as run-in to September begins.</p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=66" alt="Sport image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Sport</a>
+          <h3 class="card__title"><a href="article.html">Local club celebrates 50 years</a></h3>
+          <p class="card__summary">Life members gathered for a night of stories, awards and nostalgia.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Right: ad rail -->
+    <aside class="rail-ad" role="complementary" aria-label="Advertisement">
+      <div class="ad ad--halfpage">Half Page Ad 300×600</div>
+    </aside>
+  </div>
+</section>
+
+
+    <!-- Section: Community -->
+    <section class="section-block" aria-labelledby="community-h">
+      <div class="section-block__head">
+        <h2 id="community-h">Community</h2>
+        <a class="see-all" href="#">See all</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=9" alt="Community image" /></a>
+          <div class="card__body">
+            <a class="section-tag" href="#">Community</a>
+            <h3 class="card__title"><a href="article.html">Volunteers restore historic hall</a></h3>
+            <p class="card__summary">Months of careful work culminate in a re‑opening celebration this weekend.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=10" alt="Community image" /></a>
+          <div class="card__body">
+            <a class="section-tag" href="#">Community</a>
+            <h3 class="card__title"><a href="article.html">Book drive surpasses target</a></h3>
+            <p class="card__summary">Donations will stock new shelves at the library and local schools.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=11" alt="Community image" /></a>
+          <div class="card__body">
+            <a class="section-tag" href="#">Community</a>
+            <h3 class="card__title"><a href="article.html">Gallery hosts youth showcase</a></h3>
+            <p class="card__summary">Emerging artists present bold works inspired by local landscapes.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=30" alt="Community image" /></a>
+          <div class="card__body">
+            <a class="section-tag" href="#">Community</a>
+            <h3 class="card__title"><a href="article.html">Spotlight on community group</a></h3>
+            <p class="card__summary">The quick brown fox jumped over the lazy dog.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: Rural with right rail MREC -->
+<section class="section-block section-block--mrec" aria-labelledby="rural-h">
+  <div class="section-block__head">
+    <h2 id="rural-h">Rural</h2>
+    <a class="see-all" href="#">See all</a>
+  </div>
+
+  <div class="section-block__inner">
+    <!-- Left: cards (1 row of 3) -->
+    <div class="cards cards--triple">
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=71" alt="Rural image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Rural</a>
+          <h3 class="card__title"><a href="article.html">Harvest outlook improves after rain</a></h3>
+          <p class="card__summary">Growers report strong early signs across several key crops.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=72" alt="Rural image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Rural</a>
+          <h3 class="card__title"><a href="article.html">Road upgrades to improve freight</a></h3>
+          <p class="card__summary">New works aim to cut travel times and boost safety for heavy vehicles.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__media" href="article.html"><img src="https://picsum.photos/600/400?random=73" alt="Rural image" /></a>
+        <div class="card__body">
+          <a class="section-tag" href="#">Rural</a>
+          <h3 class="card__title"><a href="article.html">Ag showcase returns in spring</a></h3>
+          <p class="card__summary">Exhibitors from across the state will gather for the annual event.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Right: ad rail -->
+    <aside class="rail-ad" role="complementary" aria-label="Advertisement">
+      <div class="ad ad--mrec">Medium Rectangle Ad 300×250</div>
+    </aside>
+  </div>
+</section>
+  </main>
+
+<footer class="site-footer site-footer--dark" role="contentinfo">
+  <div class="container">
+
+    <!-- Top: columns -->
+    <div class="footer-grid">
+      <!-- Brand / blurb / socials -->
+      <section class="footer-brand">
+        <h3 class="footer-logo">Wangaratta Chronicle</h3>
+        <p class="footer-blurb">
+          Your trusted source for breaking news, in-depth analysis, and comprehensive
+          coverage of local news and events.
+        </p>
+
+        <nav class="footer-socials" aria-label="Social media">
+          <a href="#" aria-label="Facebook" class="social">
+            <!-- facebook -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.01 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.86h2.78l-.44 2.9h-2.34V22c4.78-.78 8.44-4.93 8.44-9.94Z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter / X" class="social">
+            <!-- x -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h4.7l4.24 6.02L16.7 3H21l-7.9 9.27L21 21h-4.7l-4.6-6.53L7.3 21H3l8.1-8.73L3 3Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social">
+            <!-- instagram -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social">
+            <!-- youtube -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.6-.46-5.3a3.06 3.06 0 0 0-2.15-2.15C18.7 4.1 12 4.1 12 4.1s-6.7 0-8.39.45A3.06 3.06 0 0 0 1.46 6.7C1 8.4 1 12 1 12s0 3.6.46 5.3a3.06 3.06 0 0 0 2.15 2.15c1.69.45 8.39.45 8.39.45s6.7 0 8.39-.45a3.06 3.06 0 0 0 2.15-2.15C23 15.6 23 12 23 12ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          </a>
+        </nav>
+      </section>
+
+      <!-- Link columns -->
+      <section class="footer-col">
+        <h4>News Categories</h4>
+        <ul>
+          <li><a href="#">Breaking News</a></li>
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">World</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">Science</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Press Releases</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Mobile App</a></li>
+          <li><a href="#">RSS Feeds</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Obituaries</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-rule" />
+
+    <!-- Newsletter -->
+    <section class="footer-newsletter" aria-label="Newsletter signup">
+      <div class="footer-newsletter__copy">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for the latest headlines and exclusive content.</p>
+      </div>
+      <form class="footer-form" action="#" method="post" aria-label="Subscribe form">
+        <label class="sr-only" for="newsletter-email">Your email address</label>
+        <input id="newsletter-email" type="email" placeholder="Your email address" required />
+        <button type="submit" class="btn primary">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>© 2025 North East Media. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Settings</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
