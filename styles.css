@@ -1287,3 +1287,238 @@ blockquote {
 .modal__links a:hover { color: var(--brand-ink); }
 
 
+/* Newsletter block */
+.newsletter-block {
+  grid-column: 1/-1;
+  background: var(--footer-bg); /* dark background similar to footer */
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.newsletter-block__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.newsletter-block__text h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.newsletter-block__text p {
+  margin: 0;
+  color: #cbd5e1; /* lighter text */
+}
+
+.newsletter-block__form {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  max-width: 420px;
+}
+
+.newsletter-block__form input {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  height: 44px;
+  font: inherit;
+}
+
+.newsletter-block__form button {
+  height: 44px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Responsive: stack like a card on mobile */
+@media (max-width: 767px) {
+  .newsletter-block__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .newsletter-block__form {
+    flex-direction: column;
+    max-width: none;
+    align-items: center; /* center children horizontally */
+  }
+
+.newsletter-block__form input {
+  width: 100%;
+  height: 50px;        /* target height */
+  line-height: 50px;   /* vertically center text */
+  padding: 0 12px;     /* horizontal padding */
+  box-sizing: border-box;
+}
+
+  .newsletter-block__form button {
+    margin-top: 8px;
+    height: 44px;
+    width: auto;          /* shrink to content */
+    padding: 0 24px;      /* comfortable padding */
+    align-self: center;   /* ensure centering */
+  }
+}
+
+/* Pill button in main nav */
+.primary-bar a.nav-pill {
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px; /* pill shape */
+  transition: background .2s ease;
+}
+
+.primary-bar a.nav-pill:hover {
+  background: var(--brand-ink);
+  color: #fff;
+}
+
+/* Opinion section container: rounded well using footer palette */
+.section-block--opinion {
+  background: var(--footer-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;                 /* inner breathing room */
+}
+
+/* Header inside the well: keep light, no hard divider */
+.section-block--opinion .section-block__head {
+  border-bottom: 0;
+  margin: 4px 0 10px;
+  color: whitesmoke;
+}
+
+/* Grid for text-only opinion cards */
+.opinion-cards {
+  display: grid;
+  gap: var(--gutter);
+}
+
+/* Same breakpoints as your regular cards */
+@media (min-width: 768px) {
+  .opinion-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .opinion-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Text-only card */
+.opinion-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.opinion-card__title {
+  margin: 0;
+  line-height: 1.2;
+}
+.opinion-card__title a {
+  font-weight: 800;
+}
+
+.opinion-card__author {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Give extra space to text; italic + 4 lines */
+.opinion-card__summary {
+  margin: 2px 0 0;
+  color: var(--text);
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;  /* legacy */
+  line-clamp: 4;          /* future */
+  overflow: hidden;
+}
+
+/* === Special Publications (portrait cover cards) === */
+.pub-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.pub-card__media {
+  display: block;
+  padding: 14px 14px 0; /* space for the white frame */
+}
+
+.pub-card__cover {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+  padding: 10px;
+}
+
+/* Portrait cover maintains a consistent shape inside the frame */
+.pub-card__cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;     /* typical magazine portrait */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.pub-card__body {
+  text-align: center;       /* title centered under cover */
+}
+
+.pub-card__title {
+  margin: 10px 0 2px;
+  line-height: 1.22;
+}
+
+.pub-card__title a {
+  font-weight: 800;
+}
+
+/* Two-column section: content + half-page ad */
+.section-block--halfpage {
+  display: grid;
+  gap: var(--gutter);
+}
+
+@media (min-width: 1024px) {
+  .section-block--halfpage {
+    grid-template-columns: 3fr 1fr;  /* content | ad */
+    align-items: start;
+  }
+
+  /* Explicit child placement */
+  .section-block--halfpage > .cards {
+    grid-column: 1 / 2;
+  }
+  .section-block--halfpage > .ad--halfpage {
+    grid-column: 2 / 3;
+    position: sticky;
+    top: 88px;            /* keep in view under masthead */
+    align-self: start;
+  }
+}
